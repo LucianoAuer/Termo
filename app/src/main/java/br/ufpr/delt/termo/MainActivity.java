@@ -20,18 +20,17 @@ import android.graphics.Color;
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
-    Random random;
-    Banco banco;
-    String wordSecret;
-    public String[] letters = new String[5];
-    String tryWord;
-    private boolean tryWordCondition = false;
+    private boolean secretWordCondition = true;
     private boolean gameOverCondition = false;
-
+    private boolean tryWordCondition = false;
+    public String[] letters = new String[5];
     private boolean gameStarted = false;
-
     int letterClick = 1;
     int enterClick = 1;
+    String wordSecret;
+    String tryWord;
+    Random random;
+    Banco banco;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,12 +52,13 @@ public class MainActivity extends AppCompatActivity {
                 palavra = scanner.nextLine();
             }
             String[] termo = palavra.split("\\s*;\\s*");
-            Toast.makeText(getApplicationContext(), "Sorteado: " + termo[0] + " - Termo: " + termo[1], Toast.LENGTH_LONG).show();
             wordSecret = termo[1];
+            Toast.makeText(getApplicationContext(), "Game Started: " + wordSecret, Toast.LENGTH_LONG).show();
             inputStream.close();
             scanner.close();
-        } catch (Exception e) {
-            Toast.makeText(getApplicationContext(), "Algo deu errado: " + e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+        catch (Exception e) {
+            Toast.makeText(getApplicationContext(), "Something Wrong: " + e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -68,14 +68,14 @@ public class MainActivity extends AppCompatActivity {
         if(!isGameStarted()) {
             readCSV();
             setGameStart(true);
-
+            setSecretWordCondition(false);
             button.setBackgroundResource(R.drawable.gray_icon);
             button.setTextAppearance(R.style.TextView_Style);
             button.setText("STARTED");
             button.setTextColor(getResources().getColor(R.color.red_C));
         }
         else {
-            Toast.makeText(getApplicationContext(), "Jogo já começou: " + wordSecret, Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Game Started: " + wordSecret, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -97,31 +97,27 @@ public class MainActivity extends AppCompatActivity {
                 String text = textView.getText().toString();
                 textView.setText(letters[letterClick - 1].toString());
                 System.out.println("Letra Apagada: " + letters[letterClick - 1]);
-            } else {
-                // Trate o caso quando letters[letterClick] é nulo
-                // Aqui você pode definir o texto do textView como vazio ou realizar outra ação apropriada
+            }
+            else {
                 textView.setText(""); // Define o texto do textView como vazio
-                System.out.println("Letra Apagada: "); // Imprime que a letra foi apagada
+                System.out.println("Letra Apagada: ");
             }
         } else {
-            System.out.println("GameOver, não apaga: "); // Imprime que a letra foi apagada
+            System.out.println("GameOver, não apaga: ");
         }
     }
     public void onClickTextView(View view) {
         int textViewId = view.getId();
         String textViewIdAsString = getResources().getResourceEntryName(textViewId);
 
-        // Dividir o ID do TextView em partes
         String[] parts = textViewIdAsString.split("tvLetter");
         if (parts.length == 2)
         {
-            String lineStr = parts[1].substring(0, 1); // Obtém o primeiro caractere após "tvLetter" (representando a linha)
-            String columnStr = parts[1].substring(1, 2); // Obtém o segundo caractere após "tvLetter" (representando a coluna)
+            String lineStr = parts[1].substring(0, 1);
+            String columnStr = parts[1].substring(1, 2);
 
-            // Agora você tem os valores numéricos correspondentes à linha e à coluna
             int line = Integer.parseInt(lineStr);
             int column = Integer.parseInt(columnStr);
-
             letterClick = column;
 
             System.out.println("Linha: " + line + ", Coluna: " + column);
@@ -136,7 +132,8 @@ public class MainActivity extends AppCompatActivity {
                 setValidWord(false); // Seta a palavra tentada como inválida
                 System.out.println("Palavra inválida: " + isValidWord());
                 break; // Sai do for na posição i
-            } else {
+            }
+            else {
                 setValidWord(true); // Seta a palavra tentada como válida
                 System.out.println("Palavra inválida: " + isValidWord());
             }
