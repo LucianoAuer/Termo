@@ -39,40 +39,44 @@ public class MainActivity extends AppCompatActivity {
         setContentView(br.ufpr.delt.termo.R.layout.activity_main);
 
         random = new Random();
-
         banco = Banco.getInstance();
-
-        readCSV();
     }
 
     private void readCSV() {
-
-        if(!isGameStarted()){
-            try {
-                String palavra = null;
-                int pos = 1 + random.nextInt(86);
-                InputStream inputStream = getApplicationContext().getResources().openRawResource(br.ufpr.delt.termo.R.raw.palavras_termo);
-                Scanner scanner = new Scanner(inputStream);
-                for (int i = 1; i <= pos; i++)
-                {
-                    palavra = scanner.nextLine();
-                }
-                String[] termo = palavra.split("\\s*;\\s*");
-                Toast.makeText(getApplicationContext(), "Sorteado: " + termo[0] + " - Termo: " + termo[1], Toast.LENGTH_LONG).show();
-                wordSecret = termo[1];
-                setGameStart(true);
-                inputStream.close();
-                scanner.close();
-            } catch (Exception e) {
-                Toast.makeText(getApplicationContext(), "Algo deu errado: " + e.getMessage(), Toast.LENGTH_LONG).show();
+        try {
+            String palavra = null;
+            int pos = 1 + random.nextInt(86);
+            InputStream inputStream = getApplicationContext().getResources().openRawResource(br.ufpr.delt.termo.R.raw.palavras_termo);
+            Scanner scanner = new Scanner(inputStream);
+            for (int i = 1; i <= pos; i++)
+            {
+                palavra = scanner.nextLine();
             }
-        } else {
-            Toast.makeText(getApplicationContext(), "Jogo já começou: " + wordSecret, Toast.LENGTH_LONG).show();
+            String[] termo = palavra.split("\\s*;\\s*");
+            Toast.makeText(getApplicationContext(), "Sorteado: " + termo[0] + " - Termo: " + termo[1], Toast.LENGTH_LONG).show();
+            wordSecret = termo[1];
+            inputStream.close();
+            scanner.close();
+        } catch (Exception e) {
+            Toast.makeText(getApplicationContext(), "Algo deu errado: " + e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 
-    public void onClickSortear(View view) {
-        readCSV();
+    public void onClickStart(View view) {
+        Button button = findViewById(R.id.bStart);
+
+        if(!isGameStarted()) {
+            readCSV();
+            setGameStart(true);
+
+            button.setBackgroundResource(R.drawable.gray_icon);
+            button.setTextAppearance(R.style.TextView_Style);
+            button.setText("STARTED");
+            button.setTextColor(getResources().getColor(R.color.red_C));
+        }
+        else {
+            Toast.makeText(getApplicationContext(), "Jogo já começou: " + wordSecret, Toast.LENGTH_LONG).show();
+        }
     }
 
     public void onClickExit(View view){
