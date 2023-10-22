@@ -261,7 +261,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="20dp">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Q"
@@ -495,7 +495,7 @@
             android:layout_width="match_parent"
             android:layout_height="63dp"
             android:gravity="center"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="5dp">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bSortear"
