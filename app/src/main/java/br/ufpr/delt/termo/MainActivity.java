@@ -211,22 +211,15 @@ public class MainActivity extends AppCompatActivity {
                     int editViewId = getResources().getIdentifier("tvLetter" + (enterClick) + (i + 1), "id", getPackageName());
                     TextView editView = findViewById(editViewId);
 
-                    String idButton = letters[i];
-                    int resID = getResources().getIdentifier(idButton, "id", getPackageName());
+                    int resID = getResources().getIdentifier(letters[i], "id", getPackageName());
+                    Button editButton = findViewById(resID);
 
-                    if (letterTryWord == letterWordSecret && i == j)
-                    {
+                    if (letterTryWord == letterWordSecret && i == j){
                         System.out.println("GREEN " + letterTryWord);
                         if (!letterMatched[i])
                         {
-                            editView.setBackgroundColor(Color.rgb(58, 163, 148));
-                            editView.setBackgroundResource(R.drawable.green_icon);
-                            editView.setTextAppearance(R.style.TextView_Style);
-
-                            Button button = findViewById(resID);
-                            button.setBackgroundResource(R.drawable.green_icon);
-                            button.setTextAppearance(R.style.TextView_Style);
-
+                            setGreenTextView(editView);
+                            setGreenKeyboardButton(editButton);
                             letterMatched[i] = true;
                             break;
                         }
@@ -234,27 +227,16 @@ public class MainActivity extends AppCompatActivity {
                     else if (letterTryWord == letterWordSecret && i != j && !letterMatched[i])
                     {
                         System.out.println("YELLOW " + letterTryWord);
-                        editView.setBackgroundResource(R.drawable.yellow_icon);
-                        editView.setTextAppearance(R.style.TextView_Style);
-
-                        Button button = findViewById(resID);
-                        button.setBackgroundResource(R.drawable.yellow_icon);
-                        button.setTextAppearance(R.style.TextView_Style);
-
+                        setYellowTextView(editView);
+                        setYellowKeyboardButton(editButton);
                         letterMatched[i] = true;
                         break;
                     }
                     else
                     {
                         System.out.println("GRAY: " + letterTryWord);
-                        editView.setBackgroundColor(Color.rgb(49, 42, 44));
-                        editView.setBackgroundResource(R.drawable.gray_icon);
-                        editView.setTextAppearance(R.style.TextView_Style);
-
-                        Button button = findViewById(resID);
-                        button.setBackgroundResource(R.drawable.gray_icon);
-                        button.setTextAppearance(R.style.TextView_Style);
-                        button.setEnabled(false);
+                        setGrayTextView(editView);
+                        setGrayKeyboardButton(editButton);
                     }
                 }
             }
@@ -290,6 +272,36 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void setGreenTextView(TextView editView){
+        editView.setBackgroundResource(R.drawable.green_icon);
+        editView.setTextAppearance(R.style.TextView_Style);
+    }
+    public void setYellowTextView(TextView editView){
+        editView.setBackgroundResource(R.drawable.yellow_icon);
+        editView.setTextAppearance(R.style.TextView_Style);
+    }
+
+    public void setGrayTextView(TextView editView){
+        editView.setBackgroundResource(R.drawable.gray_icon);
+        editView.setTextAppearance(R.style.TextView_Style);
+    }
+
+    public void setGreenKeyboardButton(Button button){
+        button.setBackgroundResource(R.drawable.green_icon);
+        button.setTextAppearance(R.style.TextView_Style);
+        button.setEnabled(false);
+    }
+    public void setYellowKeyboardButton(Button button){
+        button.setBackgroundResource(R.drawable.yellow_icon);
+        button.setTextAppearance(R.style.TextView_Style);
+        button.setEnabled(true);
+    }
+
+    public void setGrayKeyboardButton(Button button){
+        button.setBackgroundResource(R.drawable.gray_icon);
+        button.setTextAppearance(R.style.TextView_Style);
+        button.setEnabled(false);
+    }
     public void setGameOver(boolean condition)
     {
         gameOverCondition = condition;
