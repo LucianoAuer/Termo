@@ -177,17 +177,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public boolean isSecretWordNull()
-    {
-        if(wordSecret == null)
-            return true;
-        else
-            return false;
-    }
     public void onClickEnter(View view)
     {
-        if (isSecretWordNull()) // Verificar se foi sorteado uma palavra do banco
-        {
+        if (!isSecretWordNull()){ // Verificar se foi sorteado uma palavra do banco
             Toast.makeText(getApplicationContext(), "Start Game", Toast.LENGTH_LONG).show();
             return;
         }
@@ -302,6 +294,15 @@ public class MainActivity extends AppCompatActivity {
         button.setBackgroundResource(R.drawable.gray_icon);
         button.setTextAppearance(R.style.TextView_Style);
         button.setEnabled(false);
+    }
+
+    public boolean isSecretWordNull()
+    {
+        return secretWordCondition;
+    }
+
+    public void setSecretWordCondition(boolean condition){
+        secretWordCondition = condition;
     }
     public void setGameOver(boolean condition)
     {
