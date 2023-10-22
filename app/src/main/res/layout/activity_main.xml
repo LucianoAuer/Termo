@@ -8,13 +8,29 @@
     android:background="#6E5C62"
     tools:context=".MainActivity">
 
+    <!--TEXTO-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TERMO"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <!--LINHA 1-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="0dp">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvLetter11"
@@ -261,7 +277,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Q"
@@ -490,7 +506,7 @@
     </LinearLayout>
 
 <!--    BOTÕES-->
-        <LinearLayout
+    <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="63dp"
@@ -498,15 +514,15 @@
             android:layout_marginTop="5dp">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/bSortear"
+                android:id="@+id/bStart"
                 style="@style/Operations_Button"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="2dp"
                 android:background="@drawable/buttons_icon"
-                android:onClick="onClickSortear"
+                android:onClick="onClickStart"
                 android:text="Start"
-                app:layout_constraintEnd_toEndOf="@id/bSortear"
+                app:layout_constraintEnd_toEndOf="@id/bStart"
                 app:layout_constraintHorizontal_bias="0.0" />
 
             <androidx.appcompat.widget.AppCompatButton
