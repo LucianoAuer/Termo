@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#6E5C62"
+    tools:context=".MainActivity">
+
+    <!--LINHA 1-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="40dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter11"
+            android:background="@drawable/start_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter12"
+            android:background="@drawable/start_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter13"
+            android:background="@drawable/start_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter14"
+            android:background="@drawable/start_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter15"
+            android:background="@drawable/start_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+    </LinearLayout>
+
+    <!--LINHA 2-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter21"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter22"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter23"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter24"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter25"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+    </LinearLayout>
+
+    <!--LINHA 3-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter31"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter32"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter33"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter34"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter35"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+    </LinearLayout>
+
+    <!--LINHA 4-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter41"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter42"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter43"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter44"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter45"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+    </LinearLayout>
+
+    <!--LINHA 5-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter51"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter52"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter53"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter54"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter55"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+    </LinearLayout>
+
+    <!--LINHA 6-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter61"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter62"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter63"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter64"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetter65"
+            android:background="@drawable/letters_icon"
+            style="@style/TextView_Style"
+            android:onClick="onClickTextView" />
+
+    </LinearLayout>
+
+    <!--BOTÕES-->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bSortear"
+            style="@style/Operations_Button"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/buttons_icon"
+            android:onClick="onClickSortear"
+            android:text="Start"
+            app:layout_constraintEnd_toEndOf="@id/bSortear"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bExit"
+            style="@style/Operations_Button"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/buttons_icon"
+            android:onClick="onClickExit"
+            android:text="Exit" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bEnter"
+            style="@style/Operations_Button"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/buttons_icon"
+            android:onClick="onClickEnter"
+            android:text="Enter"
+            app:layout_constraintEnd_toStartOf="@+id/bExit"
+            app:layout_constraintHorizontal_bias="0.462" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bClear"
+            style="@style/Operations_Button"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/buttons_icon"
+            android:onClick="onClickClear"
+            android:text="Clear"
+            app:layout_constraintEnd_toStartOf="@+id/bExit"
+            app:layout_constraintHorizontal_bias="0.462" />
+
+    </LinearLayout>
+
+    <!--TECLADO 1-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Q"
+            style="@style/Keyboard_Button"
+            android:onClick="onClickLetter"
+            android:text="Q" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/W"
+            style="@style/Keyboard_Button"
+            android:onClick="onClickLetter"
+            android:text="W" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/E"
+            style="@style/Keyboard_Button"
+            android:onClick="onClickLetter"
+            android:text="E" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/R"
+            style="@style/Keyboard_Button"
+            android:onClick="onClickLetter"
+            android:text="R" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/T"
+            style="@style/Keyboard_Button"
+            android:onClick="onClickLetter"
+            android:text="T" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Y"
+            style="@style/Keyboard_Button"
+            android:onClick="onClickLetter"
+            android:text="Y" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/U"
+            style="@style/Keyboard_Button"
+            android:onClick="onClickLetter"
+            android:text="U" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/I"
+            style="@style/Keyboard_Button"
+            android:onClick="onClickLetter"
+            android:text="I" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/O"
+            style="@style/Keyboard_Button"
+            android:onClick="onClickLetter"
+            android:text="O" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/P"
+            style="@style/Keyboard_Button"
+            android:onClick="onClickLetter"
+            android:text="P" />
+
+    </LinearLayout>
+
+    <!--TECLADO 2-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/A"
+            style="@style/Keyboard_Button"
+            android:text="A"
+            android:onClick="onClickLetter"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/S"
+            style="@style/Keyboard_Button"
+            android:text="S"
+            android:onClick="onClickLetter"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/D"
+            style="@style/Keyboard_Button"
+            android:text="D"
+            android:onClick="onClickLetter"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/F"
+            style="@style/Keyboard_Button"
+            android:text="F"
+            android:onClick="onClickLetter"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/G"
+            style="@style/Keyboard_Button"
+            android:text="G"
+            android:onClick="onClickLetter"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/H"
+            style="@style/Keyboard_Button"
+            android:text="H"
+            android:onClick="onClickLetter"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/J"
+            style="@style/Keyboard_Button"
+            android:text="J"
+            android:onClick="onClickLetter"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/K"
+            style="@style/Keyboard_Button"
+            android:text="K"
+            android:onClick="onClickLetter"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/L"
+            style="@style/Keyboard_Button"
+            android:text="L"
+            android:onClick="onClickLetter"/>
+
+    </LinearLayout>
+
+    <!--TECLADO 3-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Z"
+            style="@style/Keyboard_Button"
+            android:text="Z"
+            android:onClick="onClickLetter"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/X"
+            style="@style/Keyboard_Button"
+            android:text="X"
+            android:onClick="onClickLetter"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/C"
+            style="@style/Keyboard_Button"
+            android:text="C"
+            android:onClick="onClickLetter"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/V"
+            style="@style/Keyboard_Button"
+            android:text="V"
+            android:onClick="onClickLetter"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/B"
+            style="@style/Keyboard_Button"
+            android:text="B"
+            android:onClick="onClickLetter"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/N"
+            style="@style/Keyboard_Button"
+            android:text="N"
+            android:onClick="onClickLetter"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/M"
+            style="@style/Keyboard_Button"
+            android:text="M"
+            android:onClick="onClickLetter"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+
+    <style name="Keyboard_Style">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">1.5dp</item>
+    </style>
+
+    <style name="Buttons_Style">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+<!--        <item name="android:layout_weight">1</item>-->
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="TextView_Style">
+        <item name="android:layout_width">65dp</item>
+        <item name="android:layout_height">65dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">0dp</item>
+    </style>
+
+    <style name="Keyboard_Button" parent="Keyboard_Style">
+        <item name="android:background">@color/gray_buttons</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Operations_Button" parent="Buttons_Style">
+        <item name="android:background">@color/gray_buttons</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>
