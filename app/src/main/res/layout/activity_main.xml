@@ -255,62 +255,6 @@
 
     </LinearLayout>
 
-    <!--BOTÕES-->
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="63dp"
-        android:gravity="center"
-        android:layout_marginTop="10dp">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/bSortear"
-            style="@style/Operations_Button"
-            android:layout_width="70dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/buttons_icon"
-            android:onClick="onClickSortear"
-            android:text="Start"
-            app:layout_constraintEnd_toEndOf="@id/bSortear"
-            app:layout_constraintHorizontal_bias="0.0" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/bExit"
-            style="@style/Operations_Button"
-            android:layout_width="70dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/buttons_icon"
-            android:onClick="onClickExit"
-            android:text="Exit" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/bEnter"
-            style="@style/Operations_Button"
-            android:layout_width="70dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/buttons_icon"
-            android:onClick="onClickEnter"
-            android:text="Enter"
-            app:layout_constraintEnd_toStartOf="@+id/bExit"
-            app:layout_constraintHorizontal_bias="0.462" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/bClear"
-            style="@style/Operations_Button"
-            android:layout_width="70dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/buttons_icon"
-            android:onClick="onClickClear"
-            android:text="Clear"
-            app:layout_constraintEnd_toStartOf="@+id/bExit"
-            app:layout_constraintHorizontal_bias="0.462" />
-
-    </LinearLayout>
-
     <!--TECLADO 1-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -322,60 +266,70 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Q"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:onClick="onClickLetter"
             android:text="Q" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/W"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:onClick="onClickLetter"
             android:text="W" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/E"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:onClick="onClickLetter"
             android:text="E" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/R"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:onClick="onClickLetter"
             android:text="R" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/T"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:onClick="onClickLetter"
             android:text="T" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Y"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:onClick="onClickLetter"
             android:text="Y" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/U"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:onClick="onClickLetter"
             android:text="U" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/I"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:onClick="onClickLetter"
             android:text="I" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/O"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:onClick="onClickLetter"
             android:text="O" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/P"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:onClick="onClickLetter"
             android:text="P" />
 
@@ -391,56 +345,77 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/A"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="A"
             android:onClick="onClickLetter"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/S"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="S"
             android:onClick="onClickLetter"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/D"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="D"
             android:onClick="onClickLetter"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/F"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="F"
             android:onClick="onClickLetter"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/G"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="G"
             android:onClick="onClickLetter"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/H"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="H"
             android:onClick="onClickLetter"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/J"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="J"
             android:onClick="onClickLetter"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/K"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="K"
             android:onClick="onClickLetter"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/L"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="L"
             android:onClick="onClickLetter"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bClear"
+            style="@style/Operations_Button"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/buttons_icon"
+            android:onClick="onClickClear"
+            android:text="Clear"
+            app:layout_constraintEnd_toStartOf="@+id/bExit"
+            app:layout_constraintHorizontal_bias="0.462" />
 
     </LinearLayout>
 
@@ -454,46 +429,96 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Z"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="Z"
             android:onClick="onClickLetter"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/X"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="X"
             android:onClick="onClickLetter"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/C"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="C"
             android:onClick="onClickLetter"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/V"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="V"
             android:onClick="onClickLetter"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/B"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="B"
             android:onClick="onClickLetter"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/N"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="N"
             android:onClick="onClickLetter"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/M"
             style="@style/Keyboard_Button"
+            android:background="@drawable/keyboard_icons"
             android:text="M"
             android:onClick="onClickLetter"/>
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bEnter"
+            style="@style/Operations_Button"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/buttons_icon"
+            android:onClick="onClickEnter"
+            android:text="Enter"
+            app:layout_constraintEnd_toStartOf="@+id/bExit"
+            app:layout_constraintHorizontal_bias="0.462" />
+
     </LinearLayout>
 
+<!--    BOTÕES-->
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bSortear"
+                style="@style/Operations_Button"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/buttons_icon"
+                android:onClick="onClickSortear"
+                android:text="Start"
+                app:layout_constraintEnd_toEndOf="@id/bSortear"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bExit"
+                style="@style/Operations_Button"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/buttons_icon"
+                android:onClick="onClickExit"
+                android:text="Exit" />
+
+        </LinearLayout>
 
 </LinearLayout>

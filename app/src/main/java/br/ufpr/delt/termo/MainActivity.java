@@ -211,10 +211,11 @@ public class MainActivity extends AppCompatActivity {
                     int editViewId = getResources().getIdentifier("tvLetter" + (enterClick) + (i + 1), "id", getPackageName());
                     TextView editView = findViewById(editViewId);
 
+                    String idButton = letters[i];
+                    int resID = getResources().getIdentifier(idButton, "id", getPackageName());
+
                     if (letterTryWord == letterWordSecret && i == j)
                     {
-                        Button buttonSet = findViewById(R.id.Q);
-
                         System.out.println("GREEN " + letterTryWord);
                         if (!letterMatched[i])
                         {
@@ -222,8 +223,9 @@ public class MainActivity extends AppCompatActivity {
                             editView.setBackgroundResource(R.drawable.green_icon);
                             editView.setTextAppearance(R.style.TextView_Style);
 
-                            buttonSet.setBackgroundResource(R.drawable.green_icon);
-                            buttonSet.setTextAppearance(R.style.TextView_Style);
+                            Button button = findViewById(resID);
+                            button.setBackgroundResource(R.drawable.green_icon);
+                            button.setTextAppearance(R.style.TextView_Style);
 
                             letterMatched[i] = true;
                             break;
@@ -235,6 +237,9 @@ public class MainActivity extends AppCompatActivity {
                         editView.setBackgroundResource(R.drawable.yellow_icon);
                         editView.setTextAppearance(R.style.TextView_Style);
 
+                        Button button = findViewById(resID);
+                        button.setBackgroundResource(R.drawable.yellow_icon);
+                        button.setTextAppearance(R.style.TextView_Style);
 
                         letterMatched[i] = true;
                         break;
@@ -245,6 +250,11 @@ public class MainActivity extends AppCompatActivity {
                         editView.setBackgroundColor(Color.rgb(49, 42, 44));
                         editView.setBackgroundResource(R.drawable.gray_icon);
                         editView.setTextAppearance(R.style.TextView_Style);
+
+                        Button button = findViewById(resID);
+                        button.setBackgroundResource(R.drawable.gray_icon);
+                        button.setTextAppearance(R.style.TextView_Style);
+                        button.setEnabled(false);
                     }
                 }
             }
