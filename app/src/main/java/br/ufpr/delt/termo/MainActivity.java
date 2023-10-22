@@ -128,8 +128,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void verify()
-    {
+    public void verifyTryWord() {
         for(int i = 0; i < 5; i++) // Percorre todas as posições, de 0 até 4, do vetor
         {
             if(letters[i] == null || letters[i].isEmpty() ) // Verifica se a posição i está vazia ou nula:
@@ -162,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("Texto do TextView: " + text);
             System.out.println("Coluna: " + letterClick + ", Linha: " + enterClick);
 
-            verify();
+            verifyTryWord();
 
             if (isValidWord()) {
                 tryWord = letters[0] + letters[1] + letters[2] + letters[3] + letters[4];
@@ -173,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
                 letterClick++;
             } else {
                 letterClick = 1;
-                Toast.makeText(getApplicationContext(), "Última posição", Toast.LENGTH_LONG).show();
+                System.out.println("Última posição");
             }
         }
     }
@@ -189,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
     {
         if (isSecretWordNull()) // Verificar se foi sorteado uma palavra do banco
         {
-            Toast.makeText(getApplicationContext(), "Sorteie uma palavra", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Start Game", Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -197,13 +196,12 @@ public class MainActivity extends AppCompatActivity {
         Arrays.fill(letterMatched, false);
 
         if(tryWord == wordSecret){
-            Toast.makeText(getApplicationContext(), "Fim de Jogo", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "GameOver", Toast.LENGTH_LONG).show();
             return;
         }
 
         if(isValidWord() && enterClick < 7)
         {
-
             for (int i = 0; i < 5; i++)
             {
                 char letterTryWord = tryWord.charAt(i);
@@ -247,26 +245,25 @@ public class MainActivity extends AppCompatActivity {
             Arrays.fill(letters, null);
             enterClick++;
             letterClick = 1;
-            settingColorIcon();
             setValidWord(false);
+            if(enterClick < 7)
+                startIconColor();
         }
 
-        else if (!isValidWord() && enterClick < 7)
-        {
-            Toast.makeText(getApplicationContext(), "Complete a palavra", Toast.LENGTH_LONG).show();
+        else if (!isValidWord() && enterClick < 7){
+            Toast.makeText(getApplicationContext(), "Finish Word", Toast.LENGTH_LONG).show();
             System.out.println("EnterClick elseIf: " + enterClick);
         }
 
-        else
-        {
+        else{
             enterClick = 7;
             setGameOver(true);
-            Toast.makeText(getApplicationContext(), "Acabou o Jogo", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "GameOver", Toast.LENGTH_LONG).show();
             System.out.println("EnterClick else: " + enterClick);
         }
     }
 
-    public void settingColorIcon(){
+    public void startIconColor(){
         for (int i = 0; i < 5; i++)
         {
             int editViewId = getResources().getIdentifier("tvLetter" + (enterClick) + (i + 1), "id", getPackageName());
