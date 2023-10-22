@@ -74,7 +74,10 @@ public class MainActivity extends AppCompatActivity {
             button.setText("STARTED");
             button.setTextColor(getResources().getColor(R.color.red_C));
         }
-        else {
+        else if(!isGameStarted() && isGameOver()){
+            Toast.makeText(getApplicationContext(), "GameOver", Toast.LENGTH_LONG).show();
+        }
+        else{
             Toast.makeText(getApplicationContext(), "Game Started: " + wordSecret, Toast.LENGTH_LONG).show();
         }
     }
@@ -86,8 +89,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickClear(View view) {
         if(!isGameOver()) {
-            System.out.println("Letra Atual: " + letters[letterClick - 1]);
-
             letters[letterClick - 1] = null;
 
             int textViewId = getResources().getIdentifier("tvLetter" + enterClick + letterClick, "id", getPackageName());
@@ -96,14 +97,12 @@ public class MainActivity extends AppCompatActivity {
             if (letters[letterClick - 1] != null) {
                 String text = textView.getText().toString();
                 textView.setText(letters[letterClick - 1].toString());
-                System.out.println("Letra Apagada: " + letters[letterClick - 1]);
             }
             else {
                 textView.setText(""); // Define o texto do textView como vazio
-                System.out.println("Letra Apagada: ");
             }
         } else {
-            System.out.println("GameOver, não apaga: ");
+            System.out.println("GameOver");
         }
     }
     public void onClickTextView(View view) {
@@ -119,8 +118,6 @@ public class MainActivity extends AppCompatActivity {
             int line = Integer.parseInt(lineStr);
             int column = Integer.parseInt(columnStr);
             letterClick = column;
-
-            System.out.println("Linha: " + line + ", Coluna: " + column);
         }
     }
 
@@ -130,12 +127,10 @@ public class MainActivity extends AppCompatActivity {
             if(letters[i] == null || letters[i].isEmpty() ) // Verifica se a posição i está vazia ou nula:
             {
                 setValidWord(false); // Seta a palavra tentada como inválida
-                System.out.println("Palavra inválida: " + isValidWord());
                 break; // Sai do for na posição i
             }
             else {
                 setValidWord(true); // Seta a palavra tentada como válida
-                System.out.println("Palavra inválida: " + isValidWord());
             }
         }
     }
@@ -145,8 +140,6 @@ public class MainActivity extends AppCompatActivity {
             Button button = (Button) view;
             String buttonText = button.getText().toString();
 
-            System.out.println("Click position: " + letterClick);
-
             letters[letterClick - 1] = buttonText;
 
             int textViewId = getResources().getIdentifier("tvLetter" + enterClick + letterClick, "id", getPackageName());
@@ -155,28 +148,23 @@ public class MainActivity extends AppCompatActivity {
             String text = textView.getText().toString();
             textView.setText(buttonText.toString());
 
-            System.out.println("Texto do TextView: " + text);
-            System.out.println("Coluna: " + letterClick + ", Linha: " + enterClick);
-
             verifyTryWord();
 
             if (isValidWord()) {
                 tryWord = letters[0] + letters[1] + letters[2] + letters[3] + letters[4];
-                System.out.println("Palavra Válida: " + tryWord);
             }
 
             if (letterClick < 5) {
                 letterClick++;
             } else {
                 letterClick = 1;
-                System.out.println("Última posição");
             }
         }
     }
 
     public void onClickEnter(View view)
     {
-        if (!isSecretWordNull()){ // Verificar se foi sorteado uma palavra do banco
+        if (isSecretWordNull()){ // Verificar se foi sorteado uma palavra do banco
             Toast.makeText(getApplicationContext(), "Start Game", Toast.LENGTH_LONG).show();
             return;
         }
@@ -206,7 +194,6 @@ public class MainActivity extends AppCompatActivity {
                     Button editButton = findViewById(resID);
 
                     if (letterTryWord == letterWordSecret && i == j){
-                        System.out.println("GREEN " + letterTryWord);
                         if (!letterMatched[i])
                         {
                             setGreenTextView(editView);
@@ -217,7 +204,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else if (letterTryWord == letterWordSecret && i != j && !letterMatched[i])
                     {
-                        System.out.println("YELLOW " + letterTryWord);
                         setYellowTextView(editView);
                         setYellowKeyboardButton(editButton);
                         letterMatched[i] = true;
@@ -225,7 +211,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else
                     {
-                        System.out.println("GRAY: " + letterTryWord);
                         setGrayTextView(editView);
                         setGrayKeyboardButton(editButton);
                     }
@@ -241,14 +226,12 @@ public class MainActivity extends AppCompatActivity {
 
         else if (!isValidWord() && enterClick < 7){
             Toast.makeText(getApplicationContext(), "Finish Word", Toast.LENGTH_LONG).show();
-            System.out.println("EnterClick elseIf: " + enterClick);
         }
 
         else{
             enterClick = 7;
             setGameOver(true);
             Toast.makeText(getApplicationContext(), "GameOver", Toast.LENGTH_LONG).show();
-            System.out.println("EnterClick else: " + enterClick);
         }
     }
 
@@ -279,7 +262,7 @@ public class MainActivity extends AppCompatActivity {
     public void setGreenKeyboardButton(Button button){
         button.setBackgroundResource(R.drawable.green_icon);
         button.setTextAppearance(R.style.TextView_Style);
-        button.setEnabled(false);
+        button.setEnabled(true);
     }
     public void setYellowKeyboardButton(Button button){
         button.setBackgroundResource(R.drawable.yellow_icon);
