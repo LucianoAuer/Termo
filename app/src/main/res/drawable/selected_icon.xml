@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="2dp" android:right="2dp" android:left="2dp" android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#6E5C62" /> <!-- Cor de fundo -->
+            <stroke android:width="5dp" android:color="#4C4347" /> <!-- Cor da borda -->
+            <corners android:radius="7dp" /> <!-- Raio dos cantos -->
+        </shape>
+    </item>
+    <!-- Linha tracejada na parte inferior -->
+    <item android:top="0dp" android:right="2dp" android:left="2dp" android:bottom="-50dp">
+        <shape android:shape="line">
+            <solid android:color="#00000000" /> <!-- Cor transparente (para o traço) -->
+            <stroke android:width="7dp" android:color="#4C4347" /> <!-- Cor do traço e estilo -->
+        </shape>
+    </item>
+</layer-list>

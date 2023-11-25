@@ -34,31 +34,31 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvLetter11"
-            android:background="@drawable/start_icon"
+            android:background="@drawable/selected_icon"
             style="@style/TextView_Style"
             android:onClick="onClickTextView" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvLetter12"
-            android:background="@drawable/start_icon"
+            android:background="@drawable/deselected_icon"
             style="@style/TextView_Style"
             android:onClick="onClickTextView" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvLetter13"
-            android:background="@drawable/start_icon"
+            android:background="@drawable/deselected_icon"
             style="@style/TextView_Style"
             android:onClick="onClickTextView" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvLetter14"
-            android:background="@drawable/start_icon"
+            android:background="@drawable/deselected_icon"
             style="@style/TextView_Style"
             android:onClick="onClickTextView" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvLetter15"
-            android:background="@drawable/start_icon"
+            android:background="@drawable/deselected_icon"
             style="@style/TextView_Style"
             android:onClick="onClickTextView" />
     </LinearLayout>
